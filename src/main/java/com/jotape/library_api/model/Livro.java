@@ -1,8 +1,8 @@
-package com.jotape.library_api.model; // (Mantenha seu pacote original)
+package com.jotape.library_api.model; 
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank; // Import novo
-import jakarta.validation.constraints.Size;     // Import novo
+import jakarta.validation.constraints.NotBlank; 
+import jakarta.validation.constraints.Size;     
 import lombok.Data;
 import java.time.LocalDate;
 
@@ -16,7 +16,7 @@ public class Livro {
     private Long id;
 
     @Column(nullable = false, length = 150)
-    @NotBlank(message = "O título é obrigatório") // Não aceita null nem vazio ""
+    @NotBlank(message = "O título é obrigatório") 
     @Size(max = 150, message = "O título deve ter no máximo 150 caracteres")
     private String titulo;
 
