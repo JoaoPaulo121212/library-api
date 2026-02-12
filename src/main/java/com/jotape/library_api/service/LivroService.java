@@ -9,7 +9,7 @@ import org.springframework.http.HttpStatus;
 
 import java.util.List;
 
-@Service // Diz ao Spring que aqui ficam as regras de negócio
+@Service 
 public class LivroService {
 
     private final LivroRepository repository;
@@ -34,7 +34,6 @@ public class LivroService {
             .map(livroExistente -> {
                 livroExistente.setTitulo(livroAtualizado.getTitulo());
                 livroExistente.setAutor(livroAtualizado.getAutor());
-                // Não vamos atualizar o ISBN pois é a identidade do livro
                 return repository.save(livroExistente);
             }).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Livro não encontrado"));
     }
