@@ -1,0 +1,31 @@
+# --- Arquivos do Sistema (Mac) ---
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# --- Arquivos de Build (Maven) ---
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# --- Logs e Arquivos Temporários ---
+*.log
+*.class
+
+# --- IDEs (VS Code, Eclipse, IntelliJ) ---
+.vscode/
+.idea/
+*.iws
+*.iml
+*.ipr
+.classpath
+.project
+.settings/
+.springBeans
+.sts4-cache
+bin/
+
+# --- Outros ---
+HELP.md
+.env
